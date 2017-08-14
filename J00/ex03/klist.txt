@@ -1,0 +1,5 @@
+Credentials cache: API:4D05D4BE-F91A-4CBB-9E7F-960F6A69BB64
+        Principal: fbenneto@42.FR
+
+  Issued                Expires               Principal
+Jul 31 12:23:23 2017  Aug  7 08:38:38 2017  krbtgt/42.FR@42.FR
