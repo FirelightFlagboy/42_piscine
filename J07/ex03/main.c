@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbenneto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/04 22:15:47 by fbenneto          #+#    #+#             */
-/*   Updated: 2017/08/05 09:59:57 by fbenneto         ###   ########.fr       */
+/*   Created: 2017/08/09 13:31:41 by fbenneto          #+#    #+#             */
+/*   Updated: 2017/08/14 13:57:16 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <stdio.h>
 
-void	ft_putchar(char c);
+char	*ft_concat_params(int argc, char **argv);
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	rush(0, 0);
-	return (0);
+	printf("%s", ft_concat_params(argc, argv));
 }

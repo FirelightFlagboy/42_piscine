@@ -3,19 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbenneto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/04 22:15:47 by fbenneto          #+#    #+#             */
-/*   Updated: 2017/08/05 09:59:57 by fbenneto         ###   ########.fr       */
+/*   Created: 2017/08/10 15:09:07 by fbenneto          #+#    #+#             */
+/*   Updated: 2017/08/16 12:08:57 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <stdio.h>
 
-void	ft_putchar(char c);
+char	**ft_split_whitespaces(char *str);
 
 int		main(void)
 {
-	rush(0, 0);
+	char	**tab;
+	int		i;
+	char 	str[] = "               \t\t\t\t\t\t\t\n\n\n\n\n\n\n bonjoru fsdhal ha fhldsljhfl lshfslm bdshf sjkdjf wdfg s]fgpos df";
+	tab = ft_split_whitespaces(str);
+	i = -1;
+	while (tab[++i])
+	{
+		printf("tab[%d] >> %s\n", i, tab[i]);
+	}
 	return (0);
 }

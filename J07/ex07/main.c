@@ -3,19 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbenneto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/04 22:15:47 by fbenneto          #+#    #+#             */
-/*   Updated: 2017/08/05 09:59:57 by fbenneto         ###   ########.fr       */
+/*   Created: 2017/08/16 09:57:40 by fbenneto          #+#    #+#             */
+/*   Updated: 2017/08/16 10:08:36 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <stdio.h>
 
-void	ft_putchar(char c);
+char	**ft_split(char *str, char *charset);
 
-int		main(void)
+int 	main(void)
 {
-	rush(0, 0);
+	char str[] = "bonjour/je/suis/du/vomi";
+	char charset[] = "/";
+	int i;
+	char **tab = ft_split(str, charset);
+	printf("END\n");
+	i = 0;
+	while (tab[i])
+	{
+		printf("%s\n", tab[i]);
+		i++;
+	}
 	return (0);
 }

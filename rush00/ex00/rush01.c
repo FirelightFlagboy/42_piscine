@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush00.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbenneto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/04 22:30:39 by fbenneto          #+#    #+#             */
-/*   Updated: 2017/08/05 10:01:12 by fbenneto         ###   ########.fr       */
+/*   Updated: 2017/08/18 23:01:57 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void		ft_make_ceiling(int x, int y);
 
 void		rush(int x, int y)
 {
+	if (x < 0 || y < 0)
+		return ;
 	ft_make_roof(x, y);
 	ft_make_ceiling(x, y);
 	ft_make_floor(x, y);

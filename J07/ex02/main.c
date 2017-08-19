@@ -3,19 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbenneto <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/04 22:15:47 by fbenneto          #+#    #+#             */
-/*   Updated: 2017/08/06 15:08:35 by tseara           ###   ########.fr       */
+/*   Created: 2017/08/17 20:43:03 by fbenneto          #+#    #+#             */
+/*   Updated: 2017/08/18 07:59:25 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_putchar(char c);
+int		ft_ultimate_range(int **range, int min, int max);
 
-int		main(void)
+int main(void)
 {
-	rush(12, 12);
+	int *result;
+	int min = -8;
+	int max = 17;
+	int lenght;
+	int i;
+
+	i = -1;
+	result = NULL;
+	printf("BEGIN\n");
+	lenght = ft_ultimate_range(&result, min, max);
+	printf("END\n");
+	printf("%d\ntab: [", lenght);
+	while (++i < lenght)
+		printf("%d, ", result[i]);
+	printf("]\n");
 	return (0);
 }
