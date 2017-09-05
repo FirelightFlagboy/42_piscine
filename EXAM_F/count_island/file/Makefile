@@ -6,7 +6,7 @@
 #    By: florian <florian@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/05 21:05:34 by florian           #+#    #+#              #
-#    Updated: 2017/09/05 21:27:12 by florian          ###   ########.fr        #
+#    Updated: 2017/09/05 21:51:10 by florian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@echo "\033[0;32mmakin exe file\033[0m"
-	$(CC) $(FLAG) -o $@ -c $^ $(LIB)
+	$(CC) $(FLAG) -o $@ $^
 	@echo "\033[0;32mdone\033[0m"
 
 $(OBJ) : $(SRC)
