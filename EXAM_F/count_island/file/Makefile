@@ -6,7 +6,7 @@
 #    By: florian <florian@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/05 21:05:34 by florian           #+#    #+#              #
-#    Updated: 2017/09/05 21:13:15 by florian          ###   ########.fr        #
+#    Updated: 2017/09/05 21:27:12 by florian          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,10 +20,14 @@ FLAG = -Wall -Werror -Wextra
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $(FLAG) -o $@ -c $^
+	@echo "\033[0;32mmakin exe file\033[0m"
+	$(CC) $(FLAG) -o $@ -c $^ $(LIB)
+	@echo "\033[0;32mdone\033[0m"
 
 $(OBJ) : $(SRC)
-	$(CC) $(FLAG) -c $^
+	@echo "\033[0;32mmaking obj file\033[0m"
+	$(CC) $(FLAG) -c $^ $(LIB)
+	@echo "\033[0;32mdone\033[0m"
 
 clean : $(OBJ)
 	rm -f $^
